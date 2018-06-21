@@ -42,6 +42,9 @@ gem 'simple_form', '~> 3.5'
 # CSS assets for tachyons.io for your Rails project.
 gem 'tachyons-rails', '~> 4.9'
 
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.4', '>= 4.4.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
