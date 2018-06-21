@@ -1,27 +1,19 @@
-<p id="notice"><%= notice %></p>
+<section class="section ">
+  <div class="container">
+    <div class="columns">
+    <div class="fl w-third pa2">
+    <%= render 'trends' %>
+    </div>
 
-<h1 class="f2">Tweets</h1>
+     <div class="fl w-third pa2 bg-white">
+       <%= render 'form', tweets: @tweet %>
+       <%= render 'feed' %>
+     </div>
 
-<table>
-  <thead>
-    <tr>
-      <th class="f6">Tweet</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.tweet %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+     <div class="fl w-third pa2">
+       <%= render 'who-to-follow' %>
+     </div>
+       
+    </div>
+  </div>
+</section>

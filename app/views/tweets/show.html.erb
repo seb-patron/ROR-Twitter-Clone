@@ -1,9 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Tweet:</strong>
-  <%= @tweet.tweet %>
-</p>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-<%= link_to 'Edit', edit_tweet_path(@tweet) %> |
-<%= link_to 'Back', tweets_path %>
+
+<article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+     <div class="tc">
+          <img src="http://tachyons.io/img/avatar_1.jpg" class="br-100 h3 w3 dib" title="Photo of a kitty staring at you">
+          <h1 class="f4 link">Sebastian Patron</h1>
+          <h1 class="f6 black-70">@seb_patron</h1>
+          <hr class="mw3 bb bw1 b--black-10">
+     </div>
+     
+     <p class="lh-copy measure center f5 black-70">
+          <%= @tweet.tweet %>
+     </p>
+
+     <%= link_to  edit_tweet_path(@tweet), class:"lh-copy measure center f6 dim black-70"   do %> 
+          <i class="fas fa-edit"></i>
+     <% end %>
+     <%= link_to tweets_path, class:"lh-copy f6 dim black-70" do %>
+          <i class="fas fa-home"></i>
+     <% end %>
+
+</article>
+
+
+
