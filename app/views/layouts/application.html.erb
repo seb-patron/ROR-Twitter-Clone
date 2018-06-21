@@ -8,10 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="sans-serif bg-light-gray">
      <%= render 'layouts/navigation' %>
-     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+     <% if flash[:notice] %>
+  		<div class="notification w-90 ba br2 pa3 ma2 green bg-washed-green" role="alert">
+  			<p class="notice"><%= notice %></p>
+  		</div>
+  	<% end %>
+  	<% if flash[:alert] %>
+  		<div class="notification w-90 ba br2 pa3 ma2 red bg-washed-red">
+  			<p class="alert"><%= alert %></p>
+  		</div>
+  	<% end %>
     <%= yield %>
   </body>
 </html>

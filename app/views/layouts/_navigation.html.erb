@@ -1,12 +1,9 @@
-<nav class="db dt-l w-100 border-box pa3 ph5-l bg-blue">
-  <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Twitter Clone">
-    Twitter Clone
-  </a>
-  <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-    <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
-    <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="How it Works">How it Works</a>
-    <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Blog">Blog</a>
-    <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Press">Press</a>
-    <a class="link dim white f6 f5-l dib" href="#" title="Contact">Contact</a>
+<nav class="db dt-l w-100 border-box pa3 ph5-l bg-blue sans-serif">
+<%= link_to 'Twitter Clone', root_path, class: "link dim white f3 f3-l dib mr3 mr4-l sans-serif"  %>
+  <div class="db dtc-l v-mid w-100 w-75-l  tr-l">
+     <%= link_to 'Home', root_path, class: "link dim white f6 f5-l dib mr3 mr4-l sans-serif"  %>
+    <!--<a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>-->
+    <%= link_to 'New Tweet', new_tweet_path, class: "link dim white f6 f5-l dib mr3 mr4-l" %>
+    <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Blog">Sign Up</a>
   </div>
 </nav>
