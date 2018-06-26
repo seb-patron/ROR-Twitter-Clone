@@ -3,8 +3,12 @@
   <div class="db dtc-l v-mid w-100 w-75-l  tr-l">
      <%= link_to 'Home', root_path, class: "link dim white f6 f5-l dib mr3 mr4-l sans-serif"  %>
     <!--<a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>-->
+    <% if logged_in? %>
     <%= link_to 'New Tweet', new_tweet_path, class: "link dim white f6 f5-l dib mr3 mr4-l" %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"link dim white f6 f5-l dib mr3 mr4-l" %>
+    <% else %>
     <%= link_to 'Sign Up', new_user_registration_path, class: "link dim white f6 f5-l dib mr3 mr4-l sans-serif"  %>
     <%= link_to 'Log In', user_login_path, class: "link dim white f6 f5-l dib mr3 mr4-l sans-serif"  %>
+    <% end %>
   </div>
 </nav>
